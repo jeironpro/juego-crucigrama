@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/crucigrama.png" type="image/x-icon">
+    <title>Crucigrama - Juego de Palabras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/crucigrama.css">
+</head>
+<body>
+    <header>
+        <h1>Crucigrama</h1>
+    </header>
+    <main>
+        <div class="contenedor-principal">
+            <div class="contenedor-definicion-tablero">
+                <div class="mensaje" id="mensaje"></div>
+                <div class="botones-definicion">
+                    <span class="material-symbols-outlined boton-definicion" id="boton-anterior">chevron_left</span>
+                    <div class="definicion" id="definicion"></div>
+                    <span class="material-symbols-outlined boton-definicion" id="boton-siguiente">chevron_right</span>
+                </div>
+                <div class="tablero crucigrama" id="tablero"></div>
+                <div class="teclado" id="teclado"></div>
+            </div>
+            <div class="contenedor-definiciones">
+                <div class="horizontales-verticales">
+                    <div class="horizontales" id="horizontales">
+                        <h3>Horizontales</h3>
+                        <ul class="lista-definiciones" id="lista-definiciones-horizontales"></ul>
+    
+                    </div>
+                    <div class="verticales" id="verticales">
+                        <h3>Verticales</h3>
+                        <ul class="lista-definiciones" id="lista-definiciones-verticales"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Todos los derechos reservados - JeironPro 2025</p>
+    </footer>
+    <script src="js/crucigrama.js"></script>
+</body>
+</html>

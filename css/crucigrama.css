@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 1.5rem auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 1400px;
+    width: 95%;
+}
+
+footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.contenedor-principal {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 75vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor-principal .contenedor-definicion-tablero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor-principal .contenedor-definicion-tablero .definicion {
+    align-items: center;
+    background-color: #e7e7e7;
+    border-radius: 4px;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 500px;
+    padding: 15px;
+}
+
+.botones-definicion {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.botones-definicion .boton-definicion {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.contenedor-definiciones {
+    height: 60vh;
+    width: 100%;
+}
+
+.contenedor-definiciones .horizontales-verticales {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.contenedor-definiciones div {
+    padding: 10px;
+}
+
+.mensaje {
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    min-height: 30px;
+}
+
+.error {
+    color: #e30000;
+}
+
+.exito {
+    color: #008d00;
+}
+
+.tablero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.fila {
+    display: flex;
+}
+
+.casilla {
+    border: 2px solid #ccc;
+    font-size: 24px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40px;
+}
+
+.casilla-negra { 
+    background: #111; 
+    color: transparent; 
+}
+
+.teclado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 15px;
+    max-width: 500px;
+}
+
+.tecla {
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    cursor: pointer;
+    font-size: 1.2em;
+    height: 40px;
+    justify-content: center;
+    padding: 10px;
+    user-select: none;
+    width: 40px;
+}
+
+.tecla:hover {
+    background-color: #ccc;
+}
+
+.tecla-borrar {
+    background-color: #FF5252;
+    color: white;
+    font-weight: bold;
+}
+
+.tecla-borrar:hover {
+    background-color: #E53935;
+}
+
+.casilla-activa {
+    border: 3px solid #2196F3 !important;
+    background-color: #E3F2FD;
+}
+
+.casilla-palabra-activa {
+    background-color: #BBDEFB;
+}
+
+.casilla-correcta {
+    background-color: #C8E6C9;
+    color: #2E7D32;
+}
+
+.casilla-incorrecta {
+    background-color: #FFCDD2;
+    color: #C62828;
+}
+
+.lista-definiciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-definiciones li {
+    padding: 8px 12px;
+    margin: 4px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.lista-definiciones li:hover {
+    background-color: #E3F2FD;
+}
+
+.definicion-activa {
+    background-color: #2196F3 !important;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin: 1rem auto;
+        width: 98%;
+        padding: 1rem;
+    }
+
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .contenedor-principal .contenedor-definicion-tablero .definicion {
+        width: 90%;
+    }
+
+    .contenedor-definiciones {
+        height: auto;
+        margin-top: 1rem;
+    }
+}
